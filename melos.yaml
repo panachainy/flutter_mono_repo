@@ -26,10 +26,26 @@ scripts:
     run: melos exec --dir-exists=test -- "flutter test"
     description: Run `flutter test` in all packages
 
-  build_runner:
-    run: melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"
-    description: Run `flutter pub run build_runner build --delete-conflicting-outputs` in all packages
-
   config_fvm:
     run: melos exec -c 6 -- "fvm use 3.10.6"
     description: Run `fvm use 3.10.6` in all packages
+
+  gen:
+    run: |
+      melos bootstrap
+      melos run generate:intl --no-select && \
+      melos run generate:build_runner --no-select
+    description: Generate files
+
+  generate:intl:
+    run: |
+      melos exec -c 1 --fail-fast -- \
+      flutter pub run intl_utils:generate
+    description: Generate localization
+    packageFilters:
+      dirExists: lib/src/l10n
+
+  generate:build_runner:
+    run: melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    # packageFilters:
+    #   ignore: []
