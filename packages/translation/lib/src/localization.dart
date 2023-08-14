@@ -11,6 +11,7 @@ class Localization extends EasyLocalization {
     required super.fallbackLocale,
   });
 
+  /// need to call before new Localization()
   static void ensureInitialized() {
     EasyLocalization.ensureInitialized();
   }
