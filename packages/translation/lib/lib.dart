@@ -1,2 +1,1 @@
-export 'src/l10n/l10n.dart';
-export 'translation.dart';
+export 'src/l10n/locale_keys.g.dart';

@@ -33,17 +33,17 @@ scripts:
   gen:
     run: |
       melos bootstrap
-      melos run generate:intl --no-select && \
+      melos run generate:localization --no-select && \
       melos run generate:build_runner --no-select
     description: Generate files
 
-  generate:intl:
+  generate:localization:
     run: |
       melos exec -c 1 --fail-fast -- \
-      flutter pub run intl_utils:generate
+      flutter pub run easy_localization:generate -S assets/l10n -f keys -O lib/src/l10n -o locale_keys.g.dart
     description: Generate localization
     packageFilters:
-      dirExists: lib/src/l10n
+      dirExists: assets/l10n
 
   generate:build_runner:
     run: melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"

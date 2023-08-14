@@ -1,7 +1,0 @@
-{
-    "@@locale": "th",
-    "counterAppBarTitle": "นับเลข",
-    "@counterAppBarTitle": {
-        "description": "โชว์บน หน้า นับเลข"
-    }
-}
