@@ -28,7 +28,7 @@
 .pub-cache/
 .pub/
 /build/
-pubspec.lock
+# pubspec.lock
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -41,3 +41,6 @@ app.*.map.json
 
 # Test related
 coverage
+
+# FVM
+**/.fvm/flutter_sdk
