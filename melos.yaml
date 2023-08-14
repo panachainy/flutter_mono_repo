@@ -25,3 +25,11 @@ scripts:
     # Only run the test command when the package has a test directory
     run: melos exec --dir-exists=test -- "flutter test"
     description: Run `flutter test` in all packages
+
+  build_runner:
+    run: melos exec -c 6 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Run `flutter pub run build_runner build --delete-conflicting-outputs` in all packages
+
+  config_fvm:
+    run: melos exec -c 6 -- "fvm use 3.10.6"
+    description: Run `fvm use 3.10.6` in all packages
