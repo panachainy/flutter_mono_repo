@@ -4,11 +4,11 @@ import 'package:easy_localization/easy_localization.dart';
 class Localization extends EasyLocalization {
   /// Constructor
   Localization({
-    super.key,
     required super.path,
     required super.supportedLocales,
     required super.child,
     required super.fallbackLocale,
+    super.key,
   });
 
   /// need to call before new Localization()
