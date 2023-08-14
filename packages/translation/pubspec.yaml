@@ -10,9 +10,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.0
+  intl_utils: ^2.8.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
   very_good_analysis: ^5.0.0
+
+flutter_intl:
+  enabled: true
+  arb_dir: lib/src/l10n/arb
+  output_dir: lib/src/l10n/generated
+  class_name: S
+  main_locale: en
