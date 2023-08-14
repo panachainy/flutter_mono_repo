@@ -1,9 +1,11 @@
 # The name of the project (required) is used for displaying purposes within IO environments and IDEs.
 name: flutter_mono_repo
 
+sdkPath: .fvm/flutter_sdk
+
 # A list of paths to local packages that are included in the Melos workspace. Each entry can be a specific path or a glob pattern.
 packages:
-  - "apps/*"
+  - "apps/**"
   - "packages/**"
 
 command:
