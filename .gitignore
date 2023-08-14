@@ -44,3 +44,5 @@ coverage
 
 # FVM
 **/.fvm/flutter_sdk
+
+.mason
